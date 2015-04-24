@@ -1,0 +1,22 @@
+{
+  "name": "sails-hook-jwt-auth",
+  "version": "0.0.0",
+  "description": "json web token authentication system",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "Sávio Lucena <saviogl@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "jsonwebtoken": "^4.2.2",
+    "sails-util": "^0.10.4",
+    "async": "^0.9.0",
+    "lodash": "^3.6.0",
+    "sails-build-dictionary": "^0.10.1",
+    "bcrypt": "^0.8.2"
+  },
+  "sails": {
+    "isHook": true
+  }
+}
