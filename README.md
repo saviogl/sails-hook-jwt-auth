@@ -61,7 +61,7 @@ module.exports = function(req, res, next) {
 };
 ```
 
-Use it as you would use any other sails policy:
+Use it as you would use any other sails policy to enable jwt authentication restriction to your `Controllers/Actions`:
 
 ```javascript
 module.exports.policies = {
@@ -116,7 +116,7 @@ module.exports.routes = {
 };
 ```
 
-## Login
+## /login
 The POST request to this route `/login` must be sent with these body parameters:
 
 ```javascript
@@ -126,7 +126,18 @@ The POST request to this route `/login` must be sent with these body parameters:
 }
 ```
 
-## Signup
+The POST response:
+
+```javascript
+{ 
+	user: user,
+	token: jwt_token
+}
+```
+
+Make sure that you provide the acquired token in every request made to the protected endpoints, as query parameter `token` or as an HTTP request `Authorization` header `Bearer TOKEN_VALUE`.
+
+## /signup
 The POST request to this route `/signup` must be sent with these body parameters:
 
 ```javascript
@@ -137,6 +148,11 @@ The POST request to this route `/signup` must be sent with these body parameters
 }
 ```
 
+The POST response:
+
+If account activation feature is disabled, the reponse will be the same as the POST /login. If it's enabled you will set the response as you want in the `sendAccountActivationEmail` function.
+
+## /activate/:token
 ### Account Activation
 This feature is off by default and to enable it you must override the `requireAccountActivation` configuration and implement the function `sendAccountActivationEmail`:
 
@@ -147,5 +163,5 @@ module.exports.jwt = {
 		sails.log.info('An email must be sent to this email: ', user.email, ' with this activation link: ', link);
 		return res.json(200, { success: 'Email has been sent to user!' });
 	}
-} 
+}
 ```
