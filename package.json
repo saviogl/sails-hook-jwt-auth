@@ -1,13 +1,13 @@
 {
   "name": "sails-hook-jwt-auth",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "json web token authentication system",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test/basic.js"
   },
   "author": "Sávio Lucena <saviogl@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "jsonwebtoken": "^4.2.2",
     "sails-util": "^0.10.4",
