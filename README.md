@@ -61,7 +61,7 @@ module.exports = function(req, res, next) {
 };
 ```
 
-Use it as you would set any other sails policy:
+Use it as you would use any other sails policy:
 
 ```
 module.exports.policies = {
@@ -72,7 +72,7 @@ module.exports.policies = {
 ```
 
 #Model
-This hook set up a basic `User` model with some defaults attributes required to implement the jwt authentication
+This hook sets up a basic `User` model with some defaults attributes required to implement the jwt authentication
 scheme.
 
 ```
