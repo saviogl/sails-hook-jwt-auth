@@ -24,7 +24,7 @@ module.exports.verifyToken = function(token, callback) {
 };
 ```
 
-#Policy
+# Policy
 The `authToken.js` policy is just like any other Sails policy and can be applied as such. It's responsible for parsing the token from the incoming request and validating it's state.
 
 ```javascript
@@ -71,7 +71,7 @@ module.exports.policies = {
 };
 ```
 
-#Model
+# Model
 This hook sets up a basic `User` model with some defaults attributes required to implement the jwt authentication
 scheme.
 
@@ -105,7 +105,7 @@ module.exports = {
 
 The `User` model can be extended with any property you want by defining it in your own Sails project.
 
-#Routes
+# Routes
 These are the routes provided by this hook:
 
 ```javascript
@@ -116,7 +116,7 @@ module.exports.routes = {
 };
 ```
 
-##Login
+## Login
 The POST request to this route `/login` must be sent with these body parameters:
 
 ```javascript
@@ -126,7 +126,7 @@ The POST request to this route `/login` must be sent with these body parameters:
 }
 ```
 
-##Signup
+## Signup
 The POST request to this route `/signup` must be sent with these body parameters:
 
 ```javascript
@@ -137,7 +137,7 @@ The POST request to this route `/signup` must be sent with these body parameters
 }
 ```
 
-###Account Activation
+### Account Activation
 This feature is off by default and to enable it you must override the `requireAccountActivation` configuration and implement the function `sendAccountActivationEmail`:
 
 ```javascript
