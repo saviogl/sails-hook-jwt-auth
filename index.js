@@ -6,7 +6,7 @@ module.exports = function (sails) {
     return {
 	    defaults: {
 	    	jwt: {
-		    	requireAccountActivation: true,
+		    	requireAccountActivation: false,
 		    	token_secret: 'Our biggest secret',
 		    	sendAccountActivationEmail: function (res, user, link){
 		    		sails.log.info('An email must be sent to this email: ', user.email, ' with this activation link: ', link);
