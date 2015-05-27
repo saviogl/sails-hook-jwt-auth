@@ -54,7 +54,7 @@ module.exports = function(req, res, next) {
   TokenAuth.verifyToken(token, function(err, decodedToken) {
     if ( err ) return res.json( 401, { err: { status: 'danger', message: res.i18n('auth.policy.invalidToken'), detail: err }});
 
-    req.token = token.sub;
+    req.token = decodedToken.sub;
 
     next();
   });
