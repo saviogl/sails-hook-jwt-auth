@@ -16,7 +16,8 @@ module.exports = {
   	},
 
   	password: {
-  		type: 'string'
+  		type: 'string',
+      required: true,
   	},
 
     active: {

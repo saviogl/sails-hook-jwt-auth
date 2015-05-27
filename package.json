@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-jwt-auth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "json web token authentication system",
   "main": "index.js",
   "scripts": {
