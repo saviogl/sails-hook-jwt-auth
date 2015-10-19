@@ -8,6 +8,10 @@
   },
   "author": "Sávio Lucena <saviogl@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saviogl/sails-hook-jwt-auth.git"
+  },
   "dependencies": {
     "jsonwebtoken": "^4.2.2",
     "sails-util": "^0.10.4",
